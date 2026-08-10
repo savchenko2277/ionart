@@ -1,0 +1,56 @@
+@use 'lib' as *;
+
+.counter {
+	$self: &;
+
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 4px;
+	padding: 4px;
+	background: #F8F2EB;
+	border-radius: 12px;
+	border: 1px solid #EADED3;
+
+	&__button {
+		@extend %reset-button;
+		@include flex-center;
+
+		width: 36px;
+		height: 36px;
+		border-radius: 8px;
+		background: #ffffff;
+		color: $textColor;
+		font-size: 18px;
+		font-weight: 600;
+		transition: all $transition;
+		border: 1px solid transparent;
+
+		&:hover {
+			background: $accentColor;
+			color: #ffffff;
+		}
+
+		&:active {
+			background: #C85B1E;
+			color: #ffffff;
+		}
+	}
+
+	&__input {
+		@extend %reset-input;
+
+		width: 44px;
+		height: 36px;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 700;
+		color: $textColor;
+		background: transparent;
+		border-radius: 8px;
+
+		&:focus {
+			background: #ffffff;
+		}
+	}
+}

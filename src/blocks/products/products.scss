@@ -1,0 +1,119 @@
+@use 'lib' as *;
+
+.products {
+	$self: &;
+
+	padding: fluid(90px, 45px) 0;
+	background: $bgSecondColor;
+	color: #3D2C24;
+	
+
+	&__container {
+
+	}
+
+	&__desc {
+		font-size: 12px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $accentColor;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 16px;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 28px;
+			height: 2px;
+			border-radius: 4px;
+			background: $accentColor;
+		}
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: row;
+		align-items: start;
+		justify-content: space-between;
+		margin-bottom: 24px;
+		gap: 16px;
+
+		@include media("<=md") {
+			flex-direction: column;
+			justify-content: start;
+		}
+	}
+
+	&__title {
+		font-size: fluid(50px, 36px);
+		font-weight: 500;
+	}
+
+	&__text {
+		font-size: fluid(18px, 16px);
+		max-width: 472px;
+		line-height: 1.5;
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 24px;
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+
+		background: #FFFAF4;
+		border-radius: 28px;
+		overflow: hidden;
+		box-shadow: 0px 16px 42px 0px #4A2F2212;
+	}
+
+	&__card-image {
+		object-fit: cover;
+		width: 100%;
+		height: 320px;
+	}
+
+	&__card-content {
+		padding: fluid(36px, 24px);
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+	}
+
+	&__card-desc {
+		font-size: 12px;
+		color: $accentColor;
+		margin-bottom: 12px;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	&__card-title {
+		font-weight: 500;
+		font-size: fluid(36px, 24px);
+		margin-bottom: 16px;
+	}
+
+	&__card-text {
+		margin-bottom: 24px;
+		color: #786258;
+		line-height: 1.5;
+	}
+
+	&__card-link {
+		margin-top: auto;
+		width: fit-content;
+	}
+
+}

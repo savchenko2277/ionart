@@ -1,0 +1,205 @@
+@use 'lib' as *;
+
+.hero {
+	$self: &;
+
+	padding-top: fluid(70px, 35px);
+	padding-bottom: fluid(90px, 45px);
+	overflow: hidden;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__desc {
+		font-size: 14px;
+		font-weight: 700;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 8px;
+		margin-bottom: fluid(24px, 16px);
+
+		&::before {
+			content: '';
+			display: block;
+			width: 8px;
+			height: 8px;
+			background: $accentColor;
+			border-radius: 50%;
+		}
+	}
+
+	&__columns {
+		display: grid;
+		grid-template-columns: minmax(480px, 620px) minmax(320px, 590px);
+		gap: 60px;
+
+		@include media("<=md") {
+			grid-template-columns: 100%;
+			gap: 32px;
+		}
+	}
+
+	&__about {
+		
+	}
+
+	&__title {
+		font-size: 48px;
+		font-weight: 900;
+		margin-bottom: 24px;
+
+		b {
+			display: block;
+			width: fit-content;
+			border-bottom: 2px solid $accentColor;
+			background: $accentColor;
+			color: #ffffff;
+			padding: 0 8px;
+			border-radius: 8px;
+		}
+
+		@include media("<=xlg") {
+			font-size: 36px;
+		}
+
+		@include media("<=xs") {
+			font-size: 28px;
+		}
+	}
+
+	&__text {
+		font-size: fluid(18px, 16px);
+		line-height: 1.5;
+		margin-bottom: 24px;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+		margin-bottom: fluid(48px, 24px);
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 16px;
+		box-shadow: inset 0 0 0 1px #C8C8C8;
+		border-radius: 12px;
+		padding: 16px 24px;
+		font-size: 14px;
+		font-weight: 700;
+
+		img {
+			width: 18px;
+			height: 18px;
+			object-fit: contain;
+		}
+	}
+
+	&__buttons {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__button {
+
+	}
+
+	&__side {
+		position: relative;
+		height: fit-content;
+
+		@include media("<=md") {
+			order: -1;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		position: relative;
+		border-radius: 24px;
+		overflow: hidden;
+		box-shadow: 0px 18px 40px 0px #4A352726;
+		transform: rotate(-1.5deg);
+
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%; height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__advantage {
+		background: $bgMainColor;
+		color: $textColor;
+		position: absolute;
+		border-radius: 8px;
+		padding: 12px 24px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 24px;
+		box-shadow: 0px 18px 40px 0px #4A352726;
+
+		img {
+			width: 24px;
+			height: 24px;
+			object-fit: contain;
+		}
+
+		h4 {
+			font-weight: 700;
+		}
+
+		p {
+			font-size: 14px;
+		}
+
+		&_first {
+			top: 48px;
+			left: -24px;
+			transform: rotate(1.5deg);
+
+			@include media("<=md") {
+				top: 24px;
+				left: 16px;
+			}
+		}
+
+		&_second {
+			bottom: 48px;
+			right: -24px;
+			transform: rotate(-1.5deg);
+
+			@include media("<=md") {
+				bottom: 24px;
+				right: 24px;
+			}
+		}
+	}
+
+	&__advantage-icon {
+
+	}
+
+	&__advantage-info {
+
+	}
+
+}

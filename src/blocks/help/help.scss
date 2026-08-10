@@ -1,0 +1,229 @@
+@use 'lib' as *;
+
+.help {
+	$self: &;
+
+	background: #F8F2EB;
+	padding: fluid(70px, 35px) 0;
+
+	&__desc {
+		margin-bottom: 12px;
+		font-size: 14px;
+		color: $accentColor;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: fluid(48px, 32px);
+		margin-bottom: 32px;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 24px;
+
+		@include media("<=md") {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	// ============================
+	// Контакты
+	// ============================
+	&__contacts {
+		background: #ffffff;
+		border-radius: 20px;
+		padding: 32px;
+		display: flex;
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	&__contacts-group {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__contact {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 12px;
+
+		img {
+			width: 20px;
+			height: 20px;
+			flex-shrink: 0;
+			margin-top: 2px;
+		}
+	}
+
+	&__contact-icon {
+		width: 20px;
+		height: 20px;
+		flex-shrink: 0;
+		margin-top: 2px;
+		font-size: 18px;
+		line-height: 20px;
+		text-align: center;
+		color: $accentColor;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__contact-info {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+
+		b {
+			font-weight: 700;
+			font-size: 16px;
+			color: $textColor;
+		}
+
+		p {
+			font-size: 14px;
+			color: #A89587;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		flex-direction: row;
+		gap: 8px;
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		padding: 10px 16px;
+		background: #F8F2EB;
+		border-radius: 10px;
+		font-size: 14px;
+		font-weight: 600;
+		color: $textColor;
+		text-decoration: none;
+		transition: background $transition;
+
+		img {
+			width: 20px;
+			height: 20px;
+		}
+
+		&:hover {
+			background: #EDE5DB;
+		}
+	}
+
+	&__requisites {
+		padding-top: 16px;
+		border-top: 1px solid #EADED3;
+	}
+
+	&__requisites-title {
+		font-weight: 700;
+		font-size: 14px;
+		color: $textColor;
+		margin-bottom: 8px;
+	}
+
+	&__requisites-text {
+		font-size: 13px;
+		color: #A89587;
+		line-height: 1.6;
+	}
+
+	// ============================
+	// Форма
+	// ============================
+	&__form-wrapper {
+		background: #ffffff;
+		border-radius: 20px;
+		padding: 32px;
+	}
+
+	&__form-title {
+		font-weight: 700;
+		font-size: 20px;
+		color: $textColor;
+		margin-bottom: 24px;
+	}
+
+	&__form {
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	&__field {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	&__label {
+		font-size: 13px;
+		font-weight: 600;
+		color: $textColor;
+	}
+
+	&__input {
+		@extend %reset-input;
+
+		width: 100%;
+		padding: 14px 16px;
+		font-size: 15px;
+		color: $textColor;
+		background: #F8F2EB;
+		border-radius: 12px;
+		border: 1px solid transparent;
+		transition: border-color $transition, background $transition;
+
+		&::placeholder {
+			color: #A89587;
+		}
+
+		&:focus {
+			background: #ffffff;
+			border-color: $accentColor;
+		}
+	}
+
+	&__textarea {
+		@extend %reset-input;
+		@extend .help__input;
+
+		min-height: 100px;
+		resize: vertical;
+	}
+
+	&__form-submit {
+		width: 100%;
+		text-align: center;
+		margin-top: 4px;
+	}
+
+	&__form-agreement {
+		font-size: 12px;
+		color: #A89587;
+		line-height: 1.4;
+		text-align: center;
+		margin-top: 4px;
+
+		a {
+			color: $accentColor;
+			text-decoration: underline;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+}

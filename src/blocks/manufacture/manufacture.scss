@@ -1,0 +1,95 @@
+@use 'lib' as *;
+
+.manufacture {
+	$self: &;
+
+	padding: fluid(70px, 35px) 0;
+
+	&__desc {
+		margin-bottom: 12px;
+		font-size: 14px;
+		color: $accentColor;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+
+	&__top {
+		display: flex;
+		flex-direction: row;
+		align-items: end;
+		justify-content: space-between;
+		margin-bottom: 16px;
+		gap: 32px;
+
+		@include media("<=md") {
+			flex-direction: column;
+			align-items: start;
+		}
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: fluid(48px, 32px);
+		flex-shrink: 0;
+	}
+
+	&__text {
+		font-size: 16px;
+		color: #A89587;
+		line-height: 1.5;
+		max-width: 480px;
+
+		@include media("<=md") {
+			max-width: none;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 18px;
+		margin-bottom: 32px;
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@include media("<=xs") {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__card {
+		background: #F8F2EB;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+
+	&__card-image {
+		width: 100%;
+		aspect-ratio: 4 / 3;
+		background: #EDE5DB;
+		@include flex-center;
+
+		img {
+			width: 64px;
+			height: 64px;
+			object-fit: contain;
+			opacity: 0.6;
+		}
+	}
+
+	&__card-content {
+		padding: 20px;
+	}
+
+	&__card-title {
+		font-weight: 700;
+		font-size: 16px;
+		color: $textColor;
+	}
+
+	&__button {
+
+	}
+}

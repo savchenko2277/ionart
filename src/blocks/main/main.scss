@@ -1,0 +1,11 @@
+@use 'lib' as *;
+
+.main {
+	$self: &;
+
+	padding-top: 130px;
+
+	@include media("<=lg") {
+		padding-top: fluid(90px, 70px);
+	}
+}

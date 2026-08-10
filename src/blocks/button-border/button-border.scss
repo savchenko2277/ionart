@@ -1,0 +1,23 @@
+@use 'lib' as *;
+
+.button-border {
+	$self: &;
+
+	@include flex-center;
+
+	gap: 10px;
+	flex-direction: row;
+	padding: 16px 18px;
+
+	background: transparent;
+	box-shadow: inset 0 0 0 1px $textColor;
+	color: $textColor;
+	font-weight: 700;
+	border-radius: 10px;
+
+	img {
+		object-fit: contain;
+		width: 24px;
+		height: 24px;
+	}
+}

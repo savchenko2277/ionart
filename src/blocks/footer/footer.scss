@@ -1,0 +1,149 @@
+@use 'lib' as *;
+
+.footer {
+	$self: &;
+
+	background: $bgThirdColor;
+	color: #AAA89E;
+
+	&__container {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	&__bottom {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: fluid(28px, 12px);
+		padding: 24px 0 48px 0;
+		border-top: 1px solid #F5F2E924;
+
+		@include media("<=md") {
+			flex-direction: column;
+			align-items: start;
+		}
+	}
+
+	&__bottom-column {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: fluid(28px, 12px);
+
+		@include media("<=xs") {
+			flex-direction: column;
+			align-items: start;
+		}
+	}
+
+	&__columns {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		gap: 64px;
+
+		@include media("<=md") {
+			grid-template-columns: repeat(2, 1fr);
+			gap: 48px;
+		}
+	}
+
+	&__column {
+
+	}
+
+	&__main {
+		min-height: 494px;
+		margin-bottom: 24px;
+
+		display: grid;
+		grid-template-columns: 300px auto;
+		justify-content: space-between;
+		padding-top: 48px;
+
+		@include media("<=xs") {
+			grid-template-columns: 100%;
+		}
+	}
+
+	&__about {
+		@include media("<=xs") {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__logo {
+		margin-bottom: 28px;
+		display: block;
+
+		img {
+			height: fluid(64px, 48px);
+			object-fit: contain;
+		}
+	}
+
+	&__desc {
+		margin-bottom: 30px;
+	}
+
+	&__link {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+		font-size: 14px;
+		color: #ffffff;
+		font-weight: 700;
+		padding: 16px 20px;
+		border-radius: 999px;
+		box-shadow: inset 0 0 0 1px #F5F2E924;
+		width: fit-content;
+
+		b {
+			color: $accentColor;
+			font-weight: 400;
+		}
+	}
+
+	&__column-title {
+		font-size: 14px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #ffffff;
+		margin-bottom: 24px;
+		padding-bottom: 12px;
+		position: relative;
+
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0; left: 0;
+			width: 24px; height: 2px;
+			background: $accentColor;
+		}
+	}
+
+	&__lists {
+		display: flex;
+		flex-direction: column;
+		gap: 48px;
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__list-item {
+
+		font-size: 14px;
+
+		&_main {
+			color: #ffffff;
+			font-weight: 600;
+		}
+	}
+
+}
