@@ -1,0 +1,101 @@
+@@include("_head.html", {"id":"checkout"})
+@@include("_header.html")
+
+<main class="main">
+
+    <section class="checkout">
+        <div class="checkout__container container">
+            <h1 class="checkout__title">Оформление заказа</h1>
+            <div class="checkout__grid">
+                <div class="checkout__form-wrapper">
+                    <h2 class="checkout__form-title">Данные покупателя</h2>
+                    <form class="checkout__form" action="#" method="post">
+                        <div class="checkout__row">
+                            <div class="checkout__field">
+                                <label class="checkout__label" for="checkout-name">Имя <span>*</span></label>
+                                <input class="checkout__input" id="checkout-name" type="text" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="checkout__field">
+                                <label class="checkout__label" for="checkout-company">Компания</label>
+                                <input class="checkout__input" id="checkout-company" type="text" name="company" placeholder="Название компании">
+                            </div>
+                        </div>
+                        <div class="checkout__row">
+                            <div class="checkout__field">
+                                <label class="checkout__label" for="checkout-phone">Телефон <span>*</span></label>
+                                <input class="checkout__input" id="checkout-phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                            <div class="checkout__field">
+                                <label class="checkout__label" for="checkout-email">Email <span>*</span></label>
+                                <input class="checkout__input" id="checkout-email" type="email" name="email" placeholder="email@example.com" required>
+                            </div>
+                        </div>
+                        <div class="checkout__field">
+                            <label class="checkout__label" for="checkout-city">Город доставки <span>*</span></label>
+                            <input class="checkout__input" id="checkout-city" type="text" name="city" placeholder="Ваш город" required>
+                        </div>
+                        <div class="checkout__field">
+                            <label class="checkout__label" for="checkout-address">Адрес доставки</label>
+                            <input class="checkout__input" id="checkout-address" type="text" name="address" placeholder="Улица, дом, квартира">
+                        </div>
+                        <div class="checkout__field">
+                            <label class="checkout__label" for="checkout-comment">Комментарий к заказу</label>
+                            <textarea class="checkout__textarea" id="checkout-comment" name="comment" placeholder="Дополнительные пожелания по заказу…"></textarea>
+                        </div>
+                        <div class="checkout__delivery">
+                            <h3 class="checkout__delivery-title">Способ доставки</h3>
+                            <div class="checkout__delivery-options">
+                                <label class="checkout__radio">
+                                    <input type="radio" name="delivery" value="tk" checked>
+                                    <span class="checkout__radio-mark"></span>
+                                    <span class="checkout__radio-text">Транспортная компания</span>
+                                </label>
+                                <label class="checkout__radio">
+                                    <input type="radio" name="delivery" value="pickup">
+                                    <span class="checkout__radio-mark"></span>
+                                    <span class="checkout__radio-text">Самовывоз</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="checkout__summary">
+                    <div class="checkout__summary-content">
+                        <h2 class="checkout__summary-title">Ваш заказ</h2>
+                        <div class="checkout__summary-list">
+                            <div class="checkout__summary-item">
+                                <span class="checkout__summary-name">Холст на подрамнике «Стандарт» 40 × 50 см</span>
+                                <span class="checkout__summary-qty">× 2 уп.</span>
+                                <b class="checkout__summary-price">9 800 ₽</b>
+                            </div>
+                            <div class="checkout__summary-item">
+                                <span class="checkout__summary-name">Холст на подрамнике «Классик» 50 × 70 см</span>
+                                <span class="checkout__summary-qty">× 1 уп.</span>
+                                <b class="checkout__summary-price">6 200 ₽</b>
+                            </div>
+                            <div class="checkout__summary-item">
+                                <span class="checkout__summary-name">Холст на подрамнике 30 × 40 см, 310 г/м²</span>
+                                <span class="checkout__summary-qty">× 3 уп.</span>
+                                <b class="checkout__summary-price">10 800 ₽</b>
+                            </div>
+                        </div>
+                        <div class="checkout__summary-total">
+                            <p>Итого</p>
+                            <b>26 800 ₽</b>
+                        </div>
+                        <button type="button" class="checkout__summary-button button">
+                            Оформить заказ
+                        </button>
+                        <p class="checkout__summary-note">
+                            Нажимая кнопку, вы соглашаетесь на <a href="#">обработку предоставленных данных</a>.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include("_bottom.html")

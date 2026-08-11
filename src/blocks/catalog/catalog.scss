@@ -1,0 +1,390 @@
+@use 'lib' as *;
+
+.catalog {
+	$self: &;
+
+	padding: 40px 0 80px;
+
+	&__title {
+		font-size: fluid(36px, 24px);
+		font-weight: 700;
+		color: $textColor;
+		margin-bottom: 32px;
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: 280px 1fr;
+		gap: 32px;
+		align-items: start;
+	}
+
+	// ---- Левая колонка: фильтры ----
+
+	&__filters {
+		position: sticky;
+		top: 20px;
+	}
+
+	&__filters-content {
+		background: #ffffff;
+		border-radius: 16px;
+		padding: 24px;
+		border: 1px solid #EADED3;
+		display: flex;
+		flex-direction: column;
+		gap: 0;
+	}
+
+	&__filters-title {
+		font-size: fluid(22px, 18px);
+		font-weight: 700;
+		color: $textColor;
+		margin-bottom: 20px;
+	}
+
+	&__filter {
+		padding: 20px 0;
+		border-bottom: 1px solid #F0E8E0;
+
+		&:last-of-type {
+			border-bottom: none;
+			padding-bottom: 0;
+		}
+
+		&:first-of-type {
+			padding-top: 0;
+		}
+	}
+
+	&__filter-title {
+		font-size: 15px;
+		font-weight: 600;
+		color: $textColor;
+		margin-bottom: 12px;
+	}
+
+	&__filter-options {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+	}
+
+	// ---- Чекбоксы ----
+
+	&__checkbox {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+		cursor: pointer;
+		user-select: none;
+
+		input {
+			@include hide;
+		}
+	}
+
+	&__checkbox-mark {
+		flex-shrink: 0;
+		width: 18px;
+		height: 18px;
+		border-radius: 4px;
+		border: 2px solid #EADED3;
+		background: #F8F2EB;
+		position: relative;
+		transition: all $transition;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 1px;
+			left: 4px;
+			width: 6px;
+			height: 10px;
+			border: solid #ffffff;
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg) scale(0);
+			transition: transform $transition;
+		}
+	}
+
+	input:checked + .catalog__checkbox-mark {
+		background: $accentColor;
+		border-color: $accentColor;
+
+		&::after {
+			transform: rotate(45deg) scale(1);
+		}
+	}
+
+	&__checkbox-text {
+		font-size: 14px;
+		color: $textColor;
+	}
+
+	// ---- Range (цена) ----
+
+	&__range {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+	}
+
+	&__range-inputs {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 8px;
+	}
+
+	&__range-field {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 6px;
+		background: #F8F2EB;
+		border: 1px solid #EADED3;
+		border-radius: 8px;
+		padding: 0 10px;
+		height: 40px;
+
+		span {
+			font-size: 12px;
+			color: #8B7B72;
+			flex-shrink: 0;
+		}
+	}
+
+	&__range-input {
+		@extend %reset-input;
+
+		width: 100%;
+		height: 100%;
+		font-size: 14px;
+		font-weight: 500;
+		color: $textColor;
+		text-align: right;
+
+		// Скрываем стрелки у number input
+		&::-webkit-outer-spin-button,
+		&::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		&[type=number] {
+			-moz-appearance: textfield;
+		}
+	}
+
+	// ---- Кнопки фильтров ----
+
+	&__filter-buttons {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-top: 24px;
+	}
+
+	&__filter-apply {
+		width: 100%;
+	}
+
+	&__filter-reset {
+		width: 100%;
+	}
+
+	// ---- Правая колонка: товары ----
+
+	&__products {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	&__filter-toggle {
+		display: none;
+	}
+
+	&__filters-close {
+		display: none;
+	}
+
+	&__products-top {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		gap: 16px;
+		flex-wrap: wrap;
+	}
+
+	&__products-count {
+		font-size: 14px;
+		color: #8B7B72;
+	}
+
+	&__products-sort {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 10px;
+		font-size: 14px;
+		color: $textColor;
+	}
+
+	&__sort-select {
+		@extend %reset-input;
+
+		height: 38px;
+		padding: 0 32px 0 12px;
+		font-size: 14px;
+		color: $textColor;
+		background: #F8F2EB url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%233D2C24' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat right 12px center;
+		border: 1px solid #EADED3;
+		border-radius: 8px;
+		appearance: none;
+		cursor: pointer;
+
+		&:focus {
+			border-color: $accentColor;
+		}
+	}
+
+	&__cards {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+}
+
+// Адаптив
+@include media("<=xlg") {
+	.catalog {
+		&__grid {
+			grid-template-columns: 260px 1fr;
+			gap: 24px;
+		}
+
+		&__cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@include media("<=md") {
+	.catalog {
+		&__grid {
+			grid-template-columns: 1fr;
+			gap: 24px;
+		}
+
+		&__filters {
+			position: static;
+			display: none;
+
+			&.active {
+				position: fixed;
+				inset: 0;
+				z-index: 1000;
+				display: flex !important;
+				justify-content: center;
+				align-items: flex-end;
+				background: rgba(0, 0, 0, 0.4);
+			}
+		}
+
+		&__filters-content {
+			.active & {
+				width: 100%;
+				max-height: 90vh;
+				overflow-y: auto;
+				border-radius: 20px 20px 0 0;
+				padding: 28px 24px 32px;
+				position: relative;
+				animation: catalogSlideUp 0.3s ease;
+			}
+		}
+
+		&__filters-close {
+			display: none;
+			font-size: 16px;
+			box-sizing: border-box;
+			vertical-align: middle;
+			font-family: inherit;
+			white-space: normal;
+			appearance: none;
+			background: none;
+			box-shadow: none;
+			line-height: 1.1;
+			max-width: none;
+			outline: none;
+			border: none;
+			resize: none;
+			min-width: 0;
+			padding: 0;
+			text-decoration: none;
+			cursor: pointer;
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			width: 36px;
+			height: 36px;
+			border-radius: 8px;
+			color: $textColor;
+			z-index: 10;
+
+			&:hover {
+				color: $accentColor;
+				background: #FFF1E8;
+			}
+
+			.active & {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+		}
+
+		&__filter-toggle {
+			@include flex-center;
+
+			width: 100%;
+			gap: 10px;
+			padding: 14px 18px;
+			background: transparent;
+			box-shadow: inset 0 0 0 1px $textColor;
+			color: $textColor;
+			font-weight: 700;
+			font-size: 14px;
+			border-radius: 10px;
+
+			svg {
+				flex-shrink: 0;
+			}
+		}
+
+		&__cards {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+}
+
+@include media("<=xs") {
+	.catalog {
+		padding: 24px 0 60px;
+
+		&__filters-content {
+			padding: 20px;
+		}
+
+		&__cards {
+			grid-template-columns: 100%;
+		}
+
+		&__products-top {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+}

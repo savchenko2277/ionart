@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/vendor/fancybox.css">
+    <link rel="stylesheet" href="css/style.css?v=1786490680066">
+    <title></title>
+</head>
+<body id="checkout">
+<header class="header">
+    <div class="header__top">
+        <div class="header__top-container container">
+            <p class="header__info">
+                <img loading="lazy" src="./img/icons/box.svg" alt="">
+                Оптовые поставки холстов и&#160;фоторамок от&#160;производителя
+            </p>
+            <div class="header__side">
+                <div class="header__contacts">
+                    <p class="header__contact">
+                        <img src="./img/icons/time.svg" alt="">
+                        Пн&#8211;Пт 9:00&#8211;18:00
+                    </p>
+                    <a href="#" class="header__contact">
+                        <img src="./img/icons/phone.svg" alt="">
+                        +7&#160;926&#160;323-05-11
+                    </a>
+                </div>
+                <div class="header__socials">
+                    <a href="#" class="header__social">
+                        <img loading="lazy" src="./img/icons/max.webp" alt="">
+                    </a>
+                    <a href="#" class="header__social">
+                        <img loading="lazy" src="./img/icons/telegram.webp" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__main">
+        <div class="header__main-container container">
+            <a href="#" class="header__logo">
+                <img loading="lazy" src="./img/logo.webp" alt="">
+            </a>
+            <div class="header__menu">
+                <ul class="header__navigation">
+                    <li class="header__navigation-item"><a href="#">Каталог</a></li>
+                    <li class="header__navigation-item"><a href="#">Покупателям</a></li>
+                    <li class="header__navigation-item"><a href="#">О&#160;компании</a></li>
+                    <li class="header__navigation-item"><a href="#">Блог</a></li>
+                    <li class="header__navigation-item"><a href="#">Контакты</a></li>
+                </ul>
+                <div class="header__side">
+                    <div class="header__buttons">
+                        <a href="#" class="header__button">
+                            <img loading="lazy" src="./img/icons/search.svg" alt="" class="header__button-icon">
+                            Найти
+                        </a>
+                        <a href="#" class="header__button">
+                            <img loading="lazy" src="./img/icons/basket.svg" alt="" class="header__button-icon">
+                            <b class="header__button-count">3</b>
+                            Корзина
+                        </a>
+                    </div>
+                    <button type="button" class="header__callback-button button">
+                        Получить консультацию
+                    </button>
+                </div>
+            </div>
+            <button type="button" class="header__burger">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+
+    <section class="checkout">
+        <div class="checkout__container container">
+            <h1 class="checkout__title">Оформление заказа</h1>
+            <div class="checkout__grid">
+                <div class="checkout__form-wrapper">
+                    <h2 class="checkout__form-title">Данные покупателя</h2>
+                    <form class="checkout__form" action="#" method="post">
+                        <div class="checkout__row">
+                            <div class="checkout__field">
+                                <label class="checkout__label" for="checkout-name">Имя <span>*</span></label>
+                                <input class="checkout__input" id="checkout-name" type="text" name="name" placeholder="Ваше имя" required>
+                            </div>
+                            <div class="checkout__field">
+                                <label class="checkout__label" for="checkout-company">Компания</label>
+                                <input class="checkout__input" id="checkout-company" type="text" name="company" placeholder="Название компании">
+                            </div>
+                        </div>
+                        <div class="checkout__row">
+                            <div class="checkout__field">
+                                <label class="checkout__label" for="checkout-phone">Телефон <span>*</span></label>
+                                <input class="checkout__input" id="checkout-phone" type="tel" name="phone" placeholder="+7 (___) ___-__-__" required>
+                            </div>
+                            <div class="checkout__field">
+                                <label class="checkout__label" for="checkout-email">Email <span>*</span></label>
+                                <input class="checkout__input" id="checkout-email" type="email" name="email" placeholder="email@example.com" required>
+                            </div>
+                        </div>
+                        <div class="checkout__field">
+                            <label class="checkout__label" for="checkout-city">Город доставки <span>*</span></label>
+                            <input class="checkout__input" id="checkout-city" type="text" name="city" placeholder="Ваш город" required>
+                        </div>
+                        <div class="checkout__field">
+                            <label class="checkout__label" for="checkout-address">Адрес доставки</label>
+                            <input class="checkout__input" id="checkout-address" type="text" name="address" placeholder="Улица, дом, квартира">
+                        </div>
+                        <div class="checkout__field">
+                            <label class="checkout__label" for="checkout-comment">Комментарий к&#160;заказу</label>
+                            <textarea class="checkout__textarea" id="checkout-comment" name="comment" placeholder="Дополнительные пожелания по заказу…"></textarea>
+                        </div>
+                        <div class="checkout__delivery">
+                            <h3 class="checkout__delivery-title">Способ доставки</h3>
+                            <div class="checkout__delivery-options">
+                                <label class="checkout__radio">
+                                    <input type="radio" name="delivery" value="tk" checked>
+                                    <span class="checkout__radio-mark"></span>
+                                    <span class="checkout__radio-text">Транспортная компания</span>
+                                </label>
+                                <label class="checkout__radio">
+                                    <input type="radio" name="delivery" value="pickup">
+                                    <span class="checkout__radio-mark"></span>
+                                    <span class="checkout__radio-text">Самовывоз</span>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <aside class="checkout__summary">
+                    <div class="checkout__summary-content">
+                        <h2 class="checkout__summary-title">Ваш заказ</h2>
+                        <div class="checkout__summary-list">
+                            <div class="checkout__summary-item">
+                                <span class="checkout__summary-name">Холст на&#160;подрамнике &#171;Стандарт&#187; 40 &#215; 50&#160;см</span>
+                                <span class="checkout__summary-qty">&#215; 2 уп.</span>
+                                <b class="checkout__summary-price">9 800 ₽</b>
+                            </div>
+                            <div class="checkout__summary-item">
+                                <span class="checkout__summary-name">Холст на&#160;подрамнике &#171;Классик&#187; 50 &#215; 70&#160;см</span>
+                                <span class="checkout__summary-qty">&#215; 1 уп.</span>
+                                <b class="checkout__summary-price">6 200 ₽</b>
+                            </div>
+                            <div class="checkout__summary-item">
+                                <span class="checkout__summary-name">Холст на&#160;подрамнике 30 &#215; 40&#160;см, 310 г/м&#178;</span>
+                                <span class="checkout__summary-qty">&#215; 3 уп.</span>
+                                <b class="checkout__summary-price">10 800 ₽</b>
+                            </div>
+                        </div>
+                        <div class="checkout__summary-total">
+                            <p>Итого</p>
+                            <b>26 800 ₽</b>
+                        </div>
+                        <button type="button" class="checkout__summary-button button">
+                            Оформить заказ
+                        </button>
+                        <p class="checkout__summary-note">
+                            Нажимая кнопку, вы&#160;соглашаетесь на&#160;<a href="#">обработку предоставленных данных</a>.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__bottom">
+            <div class="footer__bottom-column">
+                <p>
+                    &#169; 2026 ИОНАРТ
+                </p>
+                <p>
+                    Все права защищены
+                </p>
+            </div>
+            <div class="footer__bottom-column">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Согласие на&#160;обработку персональных данных</a>
+            </div>
+        </div>
+        <div class="footer__main">
+            <div class="footer__about">
+                <a href="#" class="footer__logo">
+                    <img loading="lazy" src="./img/logo.webp" alt="">
+                </a>
+                <p class="footer__desc">
+                    Фоторамки и&#160;холсты на&#160;подрамнике для
+                    ваших интерьеров, проектов и
+                    памятных моментов.
+                </p>
+                <a href="#" class="footer__link">
+                    Перейти в&#160;каталог
+                    <b>↗</b>
+                </a>
+            </div>
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Каталог</h4>
+                    <div class="footer__lists">
+                        <ul class="footer__list">
+                            <li class="footer__list-item footer__list-item_main"><a href="#">Фоторамки</a></li>
+                            <li class="footer__list-item"><a href="#">Пластиковые</a></li>
+                            <li class="footer__list-item"><a href="#">Алюминиевые</a></li>
+                        </ul>
+                        <ul class="footer__list">
+                            <li class="footer__list-item footer__list-item_main"><a href="#">Холсты на&#160;подрамнике</a>
+                            </li>
+                            <li class="footer__list-item"><a href="#">Плотность 420</a></li>
+                            <li class="footer__list-item"><a href="#">Плотность 310</a></li>
+                            <li class="footer__list-item"><a href="#">Холсты в&#160;рулонах</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Покупателям</h4>
+                    <div class="footer__lists">
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#">Условия оптового заказа</a></li>
+                            <li class="footer__list-item"><a href="#">Доставка</a></li>
+                            <li class="footer__list-item"><a href="#">Оплата</a></li>
+                            <li class="footer__list-item"><a href="#">Ответы на&#160;вопросы</a></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="footer__column">
+                    <h4 class="footer__column-title">О&#160;компании</h4>
+                    <div class="footer__lists">
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#">Производство</a></li>
+                            <li class="footer__list-item"><a href="#">О&#160;компании</a></li>
+                            <li class="footer__list-item"><a href="#">Блог</a></li>
+                            <li class="footer__list-item"><a href="#">Закупки</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/common.js?v=1786490680066"></script>
+</body>
+
+</html>

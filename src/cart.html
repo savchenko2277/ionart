@@ -1,0 +1,155 @@
+@@include("_head.html", {"id":"cart"})
+@@include("_header.html")
+
+<main class="main">
+
+    <section class="cart">
+        <div class="cart__container container">
+            <h1 class="cart__title">Корзина</h1>
+            <div class="cart__grid">
+                <div class="cart__items">
+                    <div class="cart__item">
+                        <div class="cart__item-image">
+                            <img src="./img/popular/1.webp" alt="Холст на подрамнике «Стандарт»">
+                        </div>
+                        <div class="cart__item-info">
+                            <h3 class="cart__item-title">Холст на подрамнике «Стандарт» 40 × 50 см</h3>
+                            <div class="cart__item-params">
+                                <p>Размер: <b>40 × 50 см</b></p>
+                                <p>Плотность: <b>420 г/м²</b></p>
+                                <p>В упаковке: <b>10 шт.</b></p>
+                            </div>
+                            <div class="cart__item-bottom">
+                                <div class="cart__item-counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="30" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="2" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <div class="cart__item-price">
+                                    <b>9 800 ₽</b>
+                                    <span>4 900 ₽ / уп.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cart__item-remove" aria-label="Удалить товар">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="cart__item">
+                        <div class="cart__item-image">
+                            <img src="./img/popular/1.webp" alt="Холст на подрамнике «Классик»">
+                        </div>
+                        <div class="cart__item-info">
+                            <h3 class="cart__item-title">Холст на подрамнике «Классик» 50 × 70 см</h3>
+                            <div class="cart__item-params">
+                                <p>Размер: <b>50 × 70 см</b></p>
+                                <p>Плотность: <b>420 г/м²</b></p>
+                                <p>В упаковке: <b>10 шт.</b></p>
+                            </div>
+                            <div class="cart__item-bottom">
+                                <div class="cart__item-counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="30" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="1" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <div class="cart__item-price">
+                                    <b>6 200 ₽</b>
+                                    <span>6 200 ₽ / уп.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cart__item-remove" aria-label="Удалить товар">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="cart__item">
+                        <div class="cart__item-image">
+                            <img src="./img/products/1.webp" alt="Холст на подрамнике 30 × 40 см">
+                        </div>
+                        <div class="cart__item-info">
+                            <h3 class="cart__item-title">Холст на подрамнике 30 × 40 см, плотность 310 г/м²</h3>
+                            <div class="cart__item-params">
+                                <p>Размер: <b>30 × 40 см</b></p>
+                                <p>Плотность: <b>310 г/м²</b></p>
+                                <p>В упаковке: <b>10 шт.</b></p>
+                            </div>
+                            <div class="cart__item-bottom">
+                                <div class="cart__item-counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="30" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="3" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <div class="cart__item-price">
+                                    <b>10 800 ₽</b>
+                                    <span>3 600 ₽ / уп.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="button" class="cart__item-remove" aria-label="Удалить товар">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <aside class="cart__summary">
+                    <div class="cart__summary-content">
+                        <h2 class="cart__summary-title">Ваш заказ</h2>
+                        <div class="cart__summary-list">
+                            <div class="cart__summary-item">
+                                <div class="cart__summary-name">
+                                    <span>Холст на подрамнике «Стандарт» 40 × 50 см</span>
+                                    <span class="cart__summary-qty">× 2 уп.</span>
+                                </div>
+                                <b class="cart__summary-price">9 800 ₽</b>
+                            </div>
+                            <div class="cart__summary-item">
+                                <div class="cart__summary-name">
+                                    <span>Холст на подрамнике «Классик» 50 × 70 см</span>
+                                    <span class="cart__summary-qty">× 1 уп.</span>
+                                </div>
+                                <b class="cart__summary-price">6 200 ₽</b>
+                            </div>
+                            <div class="cart__summary-item">
+                                <div class="cart__summary-name">
+                                    <span>Холст на подрамнике 30 × 40 см</span>
+                                    <span class="cart__summary-qty">× 3 уп.</span>
+                                </div>
+                                <b class="cart__summary-price">10 800 ₽</b>
+                            </div>
+                        </div>
+                        <div class="cart__summary-total">
+                            <p>Итого</p>
+                            <b>26 800 ₽</b>
+                        </div>
+                        <button type="button" class="cart__summary-button button">
+                            Оформить заказ
+                        </button>
+                        <p class="cart__summary-note">
+                            Менеджер подтвердит наличие и точную стоимость после оформления заказа.
+                        </p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+@@include("_bottom.html")

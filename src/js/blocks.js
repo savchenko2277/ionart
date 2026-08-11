@@ -6,12 +6,14 @@ import { Fancybox } from "@fancyapps/ui";
 // ============================
 // Табы в блоке popular
 // ============================
-const popularTabs = driveTabs({
-	container: '.popular',
-	controls: '.popular__navigation-btn',
-	selects: ['.popular__tab'],
-	cls: 'active',
-});
+const popularTabs = document.querySelector('.popular')
+	? driveTabs({
+		container: '.popular',
+		controls: '.popular__navigation-btn',
+		selects: ['.popular__tab'],
+		cls: 'active',
+	})
+	: null;
 
 // ============================
 // Counter (+/-) в карточках товаров
@@ -88,10 +90,50 @@ const initProductGallery = () => {
 	});
 };
 
+// ============================
+// Модалка фильтров на странице каталога
+// ============================
+const initCatalogFilters = () => {
+	const filters = document.querySelector('.catalog__filters');
+	const toggleBtn = document.querySelector('.catalog__filter-toggle');
+
+	if (!filters || !toggleBtn) return;
+
+	// Добавляем кнопку закрытия (динамически, только для мобильной модалки)
+	const closeBtn = document.createElement('button');
+	closeBtn.type = 'button';
+	closeBtn.className = 'catalog__filters-close';
+	closeBtn.innerHTML = `
+		<svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+			<path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+		</svg>
+	`;
+	filters.querySelector('.catalog__filters-content').prepend(closeBtn);
+
+	// Открытие
+	toggleBtn.addEventListener('click', () => {
+		filters.classList.add('active');
+		document.body.classList.add('scroll-lock');
+	});
+
+	// Закрытие: по клику на оверлей или кнопку закрытия
+	const closeFilters = () => {
+		filters.classList.remove('active');
+		document.body.classList.remove('scroll-lock');
+	};
+
+	filters.addEventListener('click', (e) => {
+		if (e.target === filters || e.target.closest('.catalog__filters-close')) {
+			closeFilters();
+		}
+	});
+};
+
 // Запуск после загрузки DOM
 const onDOMReady = () => {
 	initCounters();
 	initProductGallery();
+	initCatalogFilters();
 };
 
 if (document.readyState === 'loading') {

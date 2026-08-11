@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/vendor/fancybox.css">
+    <link rel="stylesheet" href="css/style.css?v=1786490680066">
+    <title></title>
+</head>
+<body id="catalog">
+<header class="header">
+    <div class="header__top">
+        <div class="header__top-container container">
+            <p class="header__info">
+                <img loading="lazy" src="./img/icons/box.svg" alt="">
+                Оптовые поставки холстов и&#160;фоторамок от&#160;производителя
+            </p>
+            <div class="header__side">
+                <div class="header__contacts">
+                    <p class="header__contact">
+                        <img src="./img/icons/time.svg" alt="">
+                        Пн&#8211;Пт 9:00&#8211;18:00
+                    </p>
+                    <a href="#" class="header__contact">
+                        <img src="./img/icons/phone.svg" alt="">
+                        +7&#160;926&#160;323-05-11
+                    </a>
+                </div>
+                <div class="header__socials">
+                    <a href="#" class="header__social">
+                        <img loading="lazy" src="./img/icons/max.webp" alt="">
+                    </a>
+                    <a href="#" class="header__social">
+                        <img loading="lazy" src="./img/icons/telegram.webp" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header__main">
+        <div class="header__main-container container">
+            <a href="#" class="header__logo">
+                <img loading="lazy" src="./img/logo.webp" alt="">
+            </a>
+            <div class="header__menu">
+                <ul class="header__navigation">
+                    <li class="header__navigation-item"><a href="#">Каталог</a></li>
+                    <li class="header__navigation-item"><a href="#">Покупателям</a></li>
+                    <li class="header__navigation-item"><a href="#">О&#160;компании</a></li>
+                    <li class="header__navigation-item"><a href="#">Блог</a></li>
+                    <li class="header__navigation-item"><a href="#">Контакты</a></li>
+                </ul>
+                <div class="header__side">
+                    <div class="header__buttons">
+                        <a href="#" class="header__button">
+                            <img loading="lazy" src="./img/icons/search.svg" alt="" class="header__button-icon">
+                            Найти
+                        </a>
+                        <a href="#" class="header__button">
+                            <img loading="lazy" src="./img/icons/basket.svg" alt="" class="header__button-icon">
+                            <b class="header__button-count">3</b>
+                            Корзина
+                        </a>
+                    </div>
+                    <button type="button" class="header__callback-button button">
+                        Получить консультацию
+                    </button>
+                </div>
+            </div>
+            <button type="button" class="header__burger">
+                <span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<main class="main">
+
+    <section class="catalog">
+        <div class="catalog__container container">
+            <h1 class="catalog__title">Каталог</h1>
+            <div class="catalog__grid">
+                <aside class="catalog__filters">
+                    <div class="catalog__filters-content">
+                        <h3 class="catalog__filters-title">Фильтры</h3>
+
+                        <div class="catalog__filter">
+                            <h4 class="catalog__filter-title">Категория</h4>
+                            <div class="catalog__filter-options">
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="category" value="canvases" checked>
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">Холсты на&#160;подрамнике</span>
+                                </label>
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="category" value="frames">
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">Фоторамки</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="catalog__filter">
+                            <h4 class="catalog__filter-title">Размер</h4>
+                            <div class="catalog__filter-options">
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="size" value="30x40">
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">30 &#215; 40&#160;см</span>
+                                </label>
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="size" value="40x50">
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">40 &#215; 50&#160;см</span>
+                                </label>
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="size" value="50x70" checked>
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">50 &#215; 70&#160;см</span>
+                                </label>
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="size" value="60x80">
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">60 &#215; 80&#160;см</span>
+                                </label>
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="size" value="80x100">
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">80 &#215; 100&#160;см</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="catalog__filter">
+                            <h4 class="catalog__filter-title">Плотность</h4>
+                            <div class="catalog__filter-options">
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="density" value="310">
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">310 г/м&#178;</span>
+                                </label>
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="density" value="420" checked>
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">420 г/м&#178;</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="catalog__filter">
+                            <h4 class="catalog__filter-title">Цена за&#160;упаковку</h4>
+                            <div class="catalog__range">
+                                <div class="catalog__range-inputs">
+                                    <div class="catalog__range-field">
+                                        <span>от</span>
+                                        <input type="number" class="catalog__range-input" value="3000" min="0" max="15000" step="100">
+                                    </div>
+                                    <div class="catalog__range-field">
+                                        <span>до</span>
+                                        <input type="number" class="catalog__range-input" value="10000" min="0" max="15000" step="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalog__filter">
+                            <h4 class="catalog__filter-title">Наличие</h4>
+                            <div class="catalog__filter-options">
+                                <label class="catalog__checkbox">
+                                    <input type="checkbox" name="stock" value="in-stock" checked>
+                                    <span class="catalog__checkbox-mark"></span>
+                                    <span class="catalog__checkbox-text">В&#160;наличии</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="catalog__filter-buttons">
+                            <button type="button" class="catalog__filter-apply button">Применить</button>
+                            <button type="reset" class="catalog__filter-reset button-border">Сбросить</button>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="catalog__products">
+                    <div class="catalog__products-top">
+                        <p class="catalog__products-count">Найдено: 12 товаров</p>
+                        <button type="button" class="catalog__filter-toggle">
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                <path d="M2 4H16M5 9H13M7 14H11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                            Фильтры
+                        </button>
+                        <div class="catalog__products-sort">
+                            <span>Сортировка:</span>
+                            <select class="catalog__sort-select">
+                                <option value="popular">По&#160;популярности</option>
+                                <option value="price-asc">Цена: по&#160;возрастанию</option>
+                                <option value="price-desc">Цена: по&#160;убыванию</option>
+                                <option value="new">Новинки</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="catalog__cards">
+                        <a href="product.html" class="catalog__card product-card">
+                            <div class="product-card__image">
+                                <p class="product-card__marker">Хит продаж</p>
+                                <img src="./img/popular/1.webp" alt="">
+                            </div>
+                            <div class="product-card__content">
+                                <h4 class="product-card__title">Холст на&#160;подрамнике &#171;Классик&#187;</h4>
+                                <div class="product-card__rows">
+                                    <div class="product-card__row">
+                                        <p>Размер</p>
+                                        <b>40 &#215; 50&#160;см</b>
+                                    </div>
+                                    <div class="product-card__row">
+                                        <p>Плотность</p>
+                                        <b>420 г/м&#178;</b>
+                                    </div>
+                                </div>
+                                <p class="product-card__available">В&#160;наличии</p>
+                                <div class="product-card__price">
+                                    <p class="product-card__price-about">За&#160;упаковку</p>
+                                    <div class="product-card__price-content">
+                                        <b>4 900 ₽</b>
+                                        490 ₽ / шт.
+                                    </div>
+                                </div>
+                                <div class="product-card__counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="10" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="1" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="product-card__button button">
+                                    В&#160;корзину
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="product.html" class="catalog__card product-card">
+                            <div class="product-card__image">
+                                <img src="./img/popular/1.webp" alt="">
+                            </div>
+                            <div class="product-card__content">
+                                <h4 class="product-card__title">Холст на&#160;подрамнике &#171;Стандарт&#187; 50 &#215; 70&#160;см</h4>
+                                <div class="product-card__rows">
+                                    <div class="product-card__row">
+                                        <p>Размер</p>
+                                        <b>50 &#215; 70&#160;см</b>
+                                    </div>
+                                    <div class="product-card__row">
+                                        <p>Плотность</p>
+                                        <b>420 г/м&#178;</b>
+                                    </div>
+                                </div>
+                                <p class="product-card__available">В&#160;наличии</p>
+                                <div class="product-card__price">
+                                    <p class="product-card__price-about">За&#160;упаковку</p>
+                                    <div class="product-card__price-content">
+                                        <b>6 200 ₽</b>
+                                        620 ₽ / шт.
+                                    </div>
+                                </div>
+                                <div class="product-card__counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="10" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="1" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="product-card__button button">
+                                    В&#160;корзину
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="product.html" class="catalog__card product-card">
+                            <div class="product-card__image">
+                                <p class="product-card__marker">Хит продаж</p>
+                                <img src="./img/products/1.webp" alt="">
+                            </div>
+                            <div class="product-card__content">
+                                <h4 class="product-card__title">Холст на&#160;подрамнике 30 &#215; 40&#160;см</h4>
+                                <div class="product-card__rows">
+                                    <div class="product-card__row">
+                                        <p>Размер</p>
+                                        <b>30 &#215; 40&#160;см</b>
+                                    </div>
+                                    <div class="product-card__row">
+                                        <p>Плотность</p>
+                                        <b>310 г/м&#178;</b>
+                                    </div>
+                                </div>
+                                <p class="product-card__available">В&#160;наличии</p>
+                                <div class="product-card__price">
+                                    <p class="product-card__price-about">За&#160;упаковку</p>
+                                    <div class="product-card__price-content">
+                                        <b>3 600 ₽</b>
+                                        360 ₽ / шт.
+                                    </div>
+                                </div>
+                                <div class="product-card__counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="10" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="1" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="product-card__button button">
+                                    В&#160;корзину
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="product.html" class="catalog__card product-card">
+                            <div class="product-card__image">
+                                <img src="./img/products/2.webp" alt="">
+                            </div>
+                            <div class="product-card__content">
+                                <h4 class="product-card__title">Холст на&#160;подрамнике 60 &#215; 80&#160;см</h4>
+                                <div class="product-card__rows">
+                                    <div class="product-card__row">
+                                        <p>Размер</p>
+                                        <b>60 &#215; 80&#160;см</b>
+                                    </div>
+                                    <div class="product-card__row">
+                                        <p>Плотность</p>
+                                        <b>420 г/м&#178;</b>
+                                    </div>
+                                </div>
+                                <p class="product-card__available">В&#160;наличии</p>
+                                <div class="product-card__price">
+                                    <p class="product-card__price-about">За&#160;упаковку</p>
+                                    <div class="product-card__price-content">
+                                        <b>7 800 ₽</b>
+                                        780 ₽ / шт.
+                                    </div>
+                                </div>
+                                <div class="product-card__counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="10" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="1" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="product-card__button button">
+                                    В&#160;корзину
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="product.html" class="catalog__card product-card">
+                            <div class="product-card__image">
+                                <img src="./img/popular/1.webp" alt="">
+                            </div>
+                            <div class="product-card__content">
+                                <h4 class="product-card__title">Холст на&#160;подрамнике &#171;Классик&#187; 80 &#215; 100&#160;см</h4>
+                                <div class="product-card__rows">
+                                    <div class="product-card__row">
+                                        <p>Размер</p>
+                                        <b>80 &#215; 100&#160;см</b>
+                                    </div>
+                                    <div class="product-card__row">
+                                        <p>Плотность</p>
+                                        <b>420 г/м&#178;</b>
+                                    </div>
+                                </div>
+                                <p class="product-card__available">В&#160;наличии</p>
+                                <div class="product-card__price">
+                                    <p class="product-card__price-about">За&#160;упаковку</p>
+                                    <div class="product-card__price-content">
+                                        <b>10 500 ₽</b>
+                                        1 050 ₽ / шт.
+                                    </div>
+                                </div>
+                                <div class="product-card__counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="10" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="1" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="product-card__button button">
+                                    В&#160;корзину
+                                </button>
+                            </div>
+                        </a>
+
+                        <a href="product.html" class="catalog__card product-card">
+                            <div class="product-card__image">
+                                <p class="product-card__marker">Хит продаж</p>
+                                <img src="./img/products/1.webp" alt="">
+                            </div>
+                            <div class="product-card__content">
+                                <h4 class="product-card__title">Холст на&#160;подрамнике &#171;Стандарт&#187; 40 &#215; 50&#160;см</h4>
+                                <div class="product-card__rows">
+                                    <div class="product-card__row">
+                                        <p>Размер</p>
+                                        <b>40 &#215; 50&#160;см</b>
+                                    </div>
+                                    <div class="product-card__row">
+                                        <p>Плотность</p>
+                                        <b>310 г/м&#178;</b>
+                                    </div>
+                                </div>
+                                <p class="product-card__available">В&#160;наличии</p>
+                                <div class="product-card__price">
+                                    <p class="product-card__price-about">За&#160;упаковку</p>
+                                    <div class="product-card__price-content">
+                                        <b>3 900 ₽</b>
+                                        390 ₽ / шт.
+                                    </div>
+                                </div>
+                                <div class="product-card__counter">
+                                    <p>Упаковок:</p>
+                                    <div data-counter-min="1" data-counter-max="10" class="counter">
+                                        <button type="button" class="counter__button counter__button_plus">+</button>
+                                        <input value="1" type="text" class="counter__input">
+                                        <button type="button" class="counter__button counter__button_minus">-</button>
+                                    </div>
+                                </div>
+                                <button type="button" class="product-card__button button">
+                                    В&#160;корзину
+                                </button>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer">
+    <div class="footer__container container">
+        <div class="footer__bottom">
+            <div class="footer__bottom-column">
+                <p>
+                    &#169; 2026 ИОНАРТ
+                </p>
+                <p>
+                    Все права защищены
+                </p>
+            </div>
+            <div class="footer__bottom-column">
+                <a href="#">Политика конфиденциальности</a>
+                <a href="#">Согласие на&#160;обработку персональных данных</a>
+            </div>
+        </div>
+        <div class="footer__main">
+            <div class="footer__about">
+                <a href="#" class="footer__logo">
+                    <img loading="lazy" src="./img/logo.webp" alt="">
+                </a>
+                <p class="footer__desc">
+                    Фоторамки и&#160;холсты на&#160;подрамнике для
+                    ваших интерьеров, проектов и
+                    памятных моментов.
+                </p>
+                <a href="#" class="footer__link">
+                    Перейти в&#160;каталог
+                    <b>↗</b>
+                </a>
+            </div>
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Каталог</h4>
+                    <div class="footer__lists">
+                        <ul class="footer__list">
+                            <li class="footer__list-item footer__list-item_main"><a href="#">Фоторамки</a></li>
+                            <li class="footer__list-item"><a href="#">Пластиковые</a></li>
+                            <li class="footer__list-item"><a href="#">Алюминиевые</a></li>
+                        </ul>
+                        <ul class="footer__list">
+                            <li class="footer__list-item footer__list-item_main"><a href="#">Холсты на&#160;подрамнике</a>
+                            </li>
+                            <li class="footer__list-item"><a href="#">Плотность 420</a></li>
+                            <li class="footer__list-item"><a href="#">Плотность 310</a></li>
+                            <li class="footer__list-item"><a href="#">Холсты в&#160;рулонах</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer__column">
+                    <h4 class="footer__column-title">Покупателям</h4>
+                    <div class="footer__lists">
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#">Условия оптового заказа</a></li>
+                            <li class="footer__list-item"><a href="#">Доставка</a></li>
+                            <li class="footer__list-item"><a href="#">Оплата</a></li>
+                            <li class="footer__list-item"><a href="#">Ответы на&#160;вопросы</a></li>
+                        </ul>
+                    </div>
+                </div>
+                 <div class="footer__column">
+                    <h4 class="footer__column-title">О&#160;компании</h4>
+                    <div class="footer__lists">
+                        <ul class="footer__list">
+                            <li class="footer__list-item"><a href="#">Производство</a></li>
+                            <li class="footer__list-item"><a href="#">О&#160;компании</a></li>
+                            <li class="footer__list-item"><a href="#">Блог</a></li>
+                            <li class="footer__list-item"><a href="#">Закупки</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/common.js?v=1786490680066"></script>
+</body>
+
+</html>
