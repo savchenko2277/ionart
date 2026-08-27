@@ -32,6 +32,14 @@
 		align-items: center;
 		gap: fluid(28px, 12px);
 
+		a {
+			transition: color $hoverTransition;
+
+			&:hover {
+				color: $accentColor;
+			}
+		}
+
 		@include media("<=xs") {
 			flex-direction: column;
 			align-items: start;
@@ -76,10 +84,15 @@
 	&__logo {
 		margin-bottom: 28px;
 		display: block;
+		transition: opacity $hoverTransition;
 
 		img {
 			height: fluid(64px, 48px);
 			object-fit: contain;
+		}
+
+		&:hover {
+			opacity: 0.8;
 		}
 	}
 
@@ -99,10 +112,23 @@
 		border-radius: 999px;
 		box-shadow: inset 0 0 0 1px #F5F2E924;
 		width: fit-content;
+		transition: background $hoverTransition, box-shadow $hoverTransition, transform $hoverTransition;
 
 		b {
 			color: $accentColor;
 			font-weight: 400;
+			transition: color $hoverTransition, transform $hoverTransition;
+		}
+
+		&:hover {
+			background: $accentColor;
+			box-shadow: inset 0 0 0 1px $accentColor;
+			transform: translateY(-2px);
+
+			b {
+				color: #ffffff;
+				transform: translate(2px, -2px);
+			}
 		}
 	}
 
@@ -139,6 +165,33 @@
 	&__list-item {
 
 		font-size: 14px;
+
+		a {
+			position: relative;
+			transition: color $hoverTransition;
+
+			&::after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: -2px;
+				width: 100%;
+				height: 1px;
+				background: $accentColor;
+				transform: scaleX(0);
+				transform-origin: right;
+				transition: transform $hoverTransition;
+			}
+
+			&:hover {
+				color: $accentColor;
+
+				&::after {
+					transform: scaleX(1);
+					transform-origin: left;
+				}
+			}
+		}
 
 		&_main {
 			color: #ffffff;

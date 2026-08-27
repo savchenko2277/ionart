@@ -15,9 +15,28 @@
 	font-weight: 700;
 	border-radius: 10px;
 
+	transition: background $hoverTransition, color $hoverTransition, box-shadow $hoverTransition, transform $hoverTransition;
+
 	img {
 		object-fit: contain;
 		width: 24px;
 		height: 24px;
+		transition: filter $hoverTransition;
+	}
+
+	&:hover {
+		background: $accentColor;
+		color: #ffffff;
+		box-shadow: inset 0 0 0 1px $accentColor, 0px 6px 18px 0px #F0803847;
+		transform: translateY(-2px);
+
+		img {
+			filter: brightness(0) invert(1);
+		}
+	}
+
+	&:active {
+		background: $accentDarkColor;
+		transform: translateY(0);
 	}
 }

@@ -139,6 +139,10 @@
 		input {
 			@include hide;
 		}
+
+		&:hover .checkout__radio-mark {
+			border-color: $accentColor;
+		}
 	}
 
 	&__radio-mark {
@@ -274,6 +278,12 @@
 		a {
 			color: $accentColor;
 			text-decoration: underline;
+			transition: color $hoverTransition;
+
+			&:hover {
+				color: $accentDarkColor;
+				text-decoration: none;
+			}
 		}
 	}
 }

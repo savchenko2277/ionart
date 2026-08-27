@@ -83,6 +83,10 @@
 		input {
 			@include hide;
 		}
+
+		&:hover .catalog__checkbox-mark {
+			border-color: $accentColor;
+		}
 	}
 
 	&__checkbox-mark {
@@ -147,6 +151,12 @@
 		border-radius: 8px;
 		padding: 0 10px;
 		height: 40px;
+		transition: border-color $hoverTransition;
+
+		&:hover,
+		&:focus-within {
+			border-color: $accentColor;
+		}
 
 		span {
 			font-size: 12px;
@@ -245,9 +255,15 @@
 		border-radius: 8px;
 		appearance: none;
 		cursor: pointer;
+		transition: border-color $hoverTransition, background-color $hoverTransition;
+
+		&:hover {
+			border-color: $accentColor;
+		}
 
 		&:focus {
 			border-color: $accentColor;
+			background-color: #ffffff;
 		}
 	}
 
@@ -358,9 +374,16 @@
 			font-weight: 700;
 			font-size: 14px;
 			border-radius: 10px;
+			transition: background $hoverTransition, color $hoverTransition, box-shadow $hoverTransition;
 
 			svg {
 				flex-shrink: 0;
+			}
+
+			&:hover {
+				background: $accentColor;
+				color: #ffffff;
+				box-shadow: inset 0 0 0 1px $accentColor;
 			}
 		}
 

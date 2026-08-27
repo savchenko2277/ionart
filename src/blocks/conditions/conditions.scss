@@ -151,11 +151,23 @@
 		max-width: 780px;
 		font-size: 14px;
 		border-radius: 30px;
+		transition: transform $hoverTransition, box-shadow $hoverTransition, background $hoverTransition;
 
 		img {
 			width: 44px;
 			height: 44px;
 			object-fit: contain;
+			transition: transform $hoverTransition;
+		}
+
+		&:hover {
+			transform: translateY(-4px);
+			background: #ffffff;
+			box-shadow: 0px 18px 40px 0px #00000026;
+
+			img {
+				transform: scale(1.08);
+			}
 		}
 	}
 

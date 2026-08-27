@@ -55,8 +55,12 @@
 		font-size: 14px;
 		font-weight: 700;
 		padding: 16px 21px;
-		color: #C85B1E;
-		transition: all $transition;
+		color: $accentDarkColor;
+		transition: background $hoverTransition, color $hoverTransition;
+
+		&:hover:not(.active) {
+			background: #FFF3E9;
+		}
 
 		&.active {
 			background: #E8752F;

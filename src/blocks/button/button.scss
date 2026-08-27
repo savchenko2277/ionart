@@ -16,9 +16,24 @@
 
 	box-shadow: 0px 4px 14px 0px #F0803847;
 
+	transition: background $hoverTransition, transform $hoverTransition, box-shadow $hoverTransition;
+
 	img {
 		object-fit: contain;
 		width: 24px;
 		height: 24px;
+		transition: transform $hoverTransition;
+	}
+
+	&:hover {
+		background: $accentDarkColor;
+		box-shadow: 0px 8px 22px 0px #F0803859;
+		transform: translateY(-2px);
+	}
+
+	&:active {
+		background: $accentDarkerColor;
+		box-shadow: 0px 3px 8px 0px #F0803833;
+		transform: translateY(0);
 	}
 }

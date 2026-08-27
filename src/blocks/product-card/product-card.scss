@@ -5,6 +5,22 @@
 
 	border-radius: 20px;
 	overflow: hidden;
+	background: #ffffff;
+	box-shadow: 0px 4px 14px 0px #4A2F220A;
+	transition: transform $hoverTransition, box-shadow $hoverTransition;
+
+	&:hover {
+		transform: translateY(-6px);
+		box-shadow: 0px 20px 44px 0px #4A2F221F;
+
+		#{$self}__image img {
+			transform: scale(1.06);
+		}
+
+		#{$self}__title {
+			color: $accentColor;
+		}
+	}
 
 	&__image {
 		width: 100%;
@@ -17,6 +33,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
+			transition: transform $hoverTransition;
 		}
 	}
 
@@ -42,6 +59,7 @@
 		font-weight: 700;
 		font-size: fluid(21px, 18px);
 		margin-bottom: 8px;
+		transition: color $hoverTransition;
 	}
 
 	&__rows {
