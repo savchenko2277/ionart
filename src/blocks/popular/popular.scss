@@ -46,6 +46,8 @@
 		display: flex;
 		flex-direction: row;
 		gap: 6px;
+		max-width: 100%;
+		overflow-x: auto;
 	}
 
 	&__navigation-btn {
